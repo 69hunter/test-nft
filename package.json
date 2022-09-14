@@ -6,12 +6,21 @@
   "scripts": {
     "truffle": "./node_modules/.bin/truffle",
     "test": "yarn truffle test",
-    "compile": "yarn truffle compile"
+    "compile": "yarn truffle compile",
+    "migrate": "yarn truffle migrate",
+    "migrate:ethereum:rinkeby": "yarn migrate --network ethereum_rinkeby",
+    "migrate:ethereum:mainnet": "yarn migrate --network ethereum_mainnet",
+    "verify": "yarn truffle run verify ",
+    "verify:ethereum:rinkeby": "yarn verify --network ethereum_rinkeby",
+    "verify:ethereum:mainnet": "yarn verify --network ethereum_mainnet"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.7.3",
+    "@truffle/hdwallet-provider": "^2.0.14",
     "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
-    "truffle": "^5.5.28"
+    "dotenv": "^16.0.2",
+    "truffle": "^5.5.28",
+    "truffle-plugin-verify": "^0.5.28"
   }
 }
